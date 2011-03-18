@@ -1,8 +1,11 @@
 require File.join(File.dirname(__FILE__), '..', 'booksiebot.rb')
 
-require 'rubygems'
-require 'sinatra'
 require 'rack/test'
+require 'test/unit'
+
+class Test::Unit::TestCase
+  include Rack::Test::Methods
+end
 
 # set test environment
 set :environment, :test
