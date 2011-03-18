@@ -1,0 +1,6 @@
+%h3 List of Reviews
+%ul
+  - @reviews.each do |review|
+    %li
+      %b= review.review_title
+      =": " + review.review

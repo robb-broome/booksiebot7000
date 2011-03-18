@@ -6,8 +6,25 @@ class Booksiebot < Sinatra::Base
   enable :sessions
   use Rack::Flash
 
+  get '/review' do
+    @review = BookReview.new
+    haml :review
+  end
+
+  post '/review' do
+    puts params[:book_review]
+    review = BookReview.create(params[:book_review])
+    if review.save
+      flash[:notice] = "Review submitted"
+      redirect '/reviews'
+    else
+      raise "Bad review"
+    end
+  end
+
   get '/reviews' do
-    "Ok"
+    @reviews = BookReview.all
+    haml :reviews
   end
 
   post '/book_requests' do

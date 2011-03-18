@@ -1,0 +1,19 @@
+%fieldset
+  %legend Book Review
+  %form{ :action => '/review',
+         :method => 'post',
+         :class => 'new_book_review' }
+
+    %ul
+      %li
+        %label{ :for => 'book_review_review_title' } Title:
+        %input{ :name => 'book_review[review_title]',
+                :type => 'text',
+                :id => 'book_review_review_title' }
+      %li
+        %label{ :for => 'book_review_review' } Review:
+        %input{ :name => 'book_review[review]',
+                :type => 'text',
+                :id => 'book_review_review' }
+    %input{ :type => 'submit', :value => 'Submit', 
+            :name => 'commit', :id => 'book_review_submit' }
