@@ -11,6 +11,10 @@ class Booksiebot < Sinatra::Base
     @requests = BookRequest.all
     haml :index
   end
+  
+  get '/reviews' do
+    "Ok"
+  end
 
   post '/book_requests' do
     request = BookRequest.create(params[:book_request])
