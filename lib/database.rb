@@ -27,3 +27,9 @@ migration "add book_reviews table" do
     text        :review
   end
 end
+
+migration "add book_review timestamp" do
+  database.alter_table :book_reviews do
+    add_column :created_at, :timestamp
+  end
+end
