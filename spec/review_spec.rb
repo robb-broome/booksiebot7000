@@ -12,6 +12,10 @@ describe "Booksiebot" do
     last_response.should be_ok
   end
 
+  it "should route get index" do
+    assert_routing '/reviews', :controller => 'booksiebot', :action => 'reviews'
+  end
+
   it "should route properly /" do
     assert_routing '/review', :controller => 'review', :action => 'post'
   end
