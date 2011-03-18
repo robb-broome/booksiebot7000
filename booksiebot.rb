@@ -1,4 +1,5 @@
 class Booksiebot < Sinatra::Base
+# fred was here.
   set :haml, { :format => :html5 }
   enable :sessions
   use Rack::Flash
