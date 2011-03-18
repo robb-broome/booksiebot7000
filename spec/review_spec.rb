@@ -11,4 +11,8 @@ describe "Booksiebot" do
     get '/reviews'
     last_response.should be_ok
   end
+
+  it "should route properly /" do
+    assert_routing '/review', :controller => 'review', :action => 'post'
+  end
 end
