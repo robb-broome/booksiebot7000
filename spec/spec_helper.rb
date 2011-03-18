@@ -3,9 +3,6 @@ require File.join(File.dirname(__FILE__), '..', 'booksiebot.rb')
 require 'rubygems'
 require 'sinatra'
 require 'rack/test'
-require 'spec'
-require 'spec/autorun'
-require 'spec/interop/test'
 
 # set test environment
 set :environment, :test
