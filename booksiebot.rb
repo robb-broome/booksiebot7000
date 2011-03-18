@@ -1,3 +1,6 @@
+require 'sinatra'
+require 'rack-flash'
+
 class Booksiebot < Sinatra::Base
 # fred was here.
   set :haml, { :format => :html5 }
