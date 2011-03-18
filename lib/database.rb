@@ -19,3 +19,11 @@ migration "add request fields to book_requests" do
     add_column :electronic, :boolean
   end
 end
+
+migration "add book_reviews table" do
+  database.create_table :book_reviews do
+    primary_key :id
+    string      :review_title, :limit => 80
+    text        :review
+  end
+end
